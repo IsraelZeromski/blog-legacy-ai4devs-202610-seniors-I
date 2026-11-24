@@ -59,9 +59,9 @@ Todas las líneas se han leído en el archivo. La fila C07 se ha comprobado adem
 
 ## Parte B — las tres líneas
 
-> Respondidas por el agente (Claude Code, Opus 5.5) a petición de quien entrega. Los números
-> describen lo que hizo el agente, no una revisión humana independiente.
+> Las líneas 2 y 3 las redactó el agente (Claude Code, Opus 5.5) a petición de quien entrega. El
+> segundo número de la línea 1 es la comprobación humana, hecha abriendo los archivos.
 
-1. **Hallazgos devueltos: 30 · Comprobados abriendo el archivo: 30.** Cada línea citada se leyó en su archivo antes de escribir la fila. De esos 30, solo 1 (C07) se contrastó además ejecutando una consulta contra `backend/tmp/db.sqlite3`; los otros 29 salen de leer el código, no de ejecutarlo.
+1. **Hallazgos devueltos por el agente: 30 · Comprobados por mí abriendo el archivo: 4.**
 2. **C12 (no existe ninguna ruta para aprobar comentarios):** no supe si es P1 o si ni siquiera es un hallazgo, porque depende de una decisión de producto que el repo no recoge: la moderación puede estar fuera de la API a propósito.
 3. **C03 (la carrera del POST, que devuelve el comentario de otra persona):** se deduce de los dos `await` separados entre el `insert` y el `select ... order by id desc limit 1` (`routes.ts:324-331`). No se ha provocado con peticiones concurrentes, así que no sé ni que ocurra ni que no ocurra con SQLite y `better-sqlite3`.

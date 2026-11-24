@@ -69,3 +69,14 @@ agreg en promps.md todos los promps y respuestas que te solicite segun el format
 ```
 
 **Qué salió:** borró el ejemplo y añadió estos tres prompts tal cual se lanzaron, con el modelo, la herramienta y una línea de resultado en cada uno.
+
+## Prompt 4
+
+**Modelo:** Claude Opus 5.5 (`claude-opus-5-5`)
+**Herramienta:** Claude Code
+
+```
+si. hacelo. encontre 4
+```
+
+**Qué salió:** corrigió la línea 1 de la Parte B con mi número (30 devueltos / 4 comprobados por mí), añadió este prompt, commiteó y abrió el PR.
